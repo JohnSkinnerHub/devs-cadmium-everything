@@ -1,0 +1,24 @@
+{
+  "shape": [9, 7],
+  "wrapped": false,
+  "cells": {
+    "default": {
+      "cell_type": "air",
+      "delay": "inertial",
+      "state": 15.0,
+      "neighborhood": [
+        { "type": "von_neumann", "range": 1, "vicinity": 1.0 },
+        { "type": "relative", "neighbors": [[1, 1], [1, -1], [-1, 1], [-1, -1]], "vicinity": 0.5 }
+      ],
+      "config": { "diffusivity": 0.2, "base_delay": 0.5, "delay_per_degree": 0.1 }
+    },
+    "window":    { "cell_type": "window", "state": 5.0 },
+    "heater":    { "cell_type": "heater", "state": 40.0 },
+    "insulated": { "config": { "diffusivity": 0.05 } }
+  },
+  "cell_map": {
+    "window":    [[0, 2], [0, 3], [0, 4]],
+    "heater":    [[7, 3]],
+    "insulated": [[3, 0], [4, 0], [5, 0]]
+  }
+}

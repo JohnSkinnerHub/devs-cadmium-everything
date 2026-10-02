@@ -1,0 +1,6 @@
+-std=c++17
+-Iinclude
+-isystem
+../Cadmium-Simulation-Environment/cadmium/include
+-isystem
+../Cadmium-Simulation-Environment/cadmium/json/single_include

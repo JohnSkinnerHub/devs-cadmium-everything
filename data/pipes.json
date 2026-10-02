@@ -1,0 +1,17 @@
+{
+  "cells": {
+    "default": {
+      "cell_type": "node",
+      "delay": "transport",
+      "state": 0.0,
+      "config": { "k": 0.3, "loss": 0.0, "latency": 1.0 }
+    },
+    "tank":  { "cell_type": "source", "state": 10.0 },
+    "j1":    { "neighborhood": { "j1": 0.0, "tank": 1.0, "j2": 1.0, "j3": 1.0 } },
+    "j2":    { "neighborhood": { "j2": 0.0, "j1": 1.0, "head1": 1.0, "head2": 1.0 } },
+    "j3":    { "neighborhood": { "j3": 0.0, "j1": 1.0, "head3": 1.0 } },
+    "head1": { "neighborhood": { "head1": 0.0, "j2": 1.0 }, "config": { "loss": 0.2 } },
+    "head2": { "neighborhood": { "head2": 0.0, "j2": 1.0 }, "config": { "loss": 0.2 } },
+    "head3": { "neighborhood": { "head3": 0.0, "j3": 1.0 }, "config": { "loss": 0.2, "latency": 2.0 } }
+  }
+}
